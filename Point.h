@@ -21,11 +21,14 @@ public:
     /// <param name="initial_x">coordinate  x</param>
     /// <param name="initial_y"> coordinate y </param>
     /// <param name="initial_color">ANSI color code</param>
-    Point(char initial_sign, int initial_x, int initial_y, int initial_color);
+    Point(char initial_sign, int initial_x, int initial_y, int initial_color) :
+        sign(initial_sign), x(initial_x), y(initial_y), color(initial_color) {}
+
+
 
 
     ///Destructor
-    ~Point();
+   // ~Point() {};
 
     /// <summary>
     /// display the point on the console
