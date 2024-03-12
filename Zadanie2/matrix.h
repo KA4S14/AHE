@@ -111,6 +111,23 @@ public:
 	/// <returns>reference to modified matrix after addition </returns>
 	matrix& operator += (const matrix &rhs);
 
+	// something special
+
+
+	/// <summary>
+	/// overloaded op - to perform matrix substraction
+	/// </summary>
+	/// <param name="rhs"> matrix to be substract</param>
+	/// <returns>matrix after substraction</returns>
+	matrix operator - (const matrix& rhs) const;
+
+	/// <summary>
+	/// overloaded compound op -= to perform matrix substraction
+	/// </summary>
+	/// <param name="rhs">matrix to be substract</param>
+	/// <returns>reference to modified matrix after substraction </returns>
+	matrix& operator -= (const matrix& rhs);
+
 
 
 	/// <summary>

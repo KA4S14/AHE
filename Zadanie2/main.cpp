@@ -1,4 +1,6 @@
-﻿
+﻿// MacierzZadanie2.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
+//
+
 #include <iostream>
 #include"matrix.h"
 using namespace std;
@@ -12,6 +14,8 @@ int main()
 	matrix jk;
 	matrix bugf;
 	matrix ig; 
+	matrix jd;
+	matrix u;
 
 
 	cout << "m:\n" << m << "\n";
@@ -56,9 +60,26 @@ int main()
 	ig += copy;
 	cout << "ig as result of op += addition: \n" << ig << " \n";
 
+
+	//-
+
+	jd.set(0, 0, 15);
+	jd.set(0, 1, 18);
+	jd.set(1, 0, 28);
+	jd.set(1,1, 30);
+	cout << "jd:" << jd << "\n";
+	cout << "u:" << u << "\n";
+	cout << "result of op - substraction :jd-u \n" << jd -u << "\n";
+	cout << "jd:" << jd << "\n";
 	
+	//-=
+	jd-=u;
+	cout << "jd as result of op -= addition: \n" << jd << " \n";
+
+
 
 	//scalar *
+	
 	
 	double loser = 25;
 	cout << "bugf:" << bugf << "\n";

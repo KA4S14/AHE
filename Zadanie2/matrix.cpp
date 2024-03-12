@@ -135,6 +135,34 @@ matrix& matrix::operator+=(const matrix& rhs)
 	return *this;
 }
 
+matrix matrix::operator-(const matrix& rhs) const
+{
+	matrix sub;
+	for (int row = 0; row < MATRIX_ROWS; row++)
+	{
+		for (int col = 0; col < MATRIX_COLS; col++)
+		{
+			sub.matrixArray[row][col] = 0;
+			sub.matrixArray[row][col] =
+				this->matrixArray[row][col] - rhs.matrixArray[row][col];
+		}
+	}
+	return sub;
+}
+
+matrix& matrix::operator-=(const matrix& rhs)
+{
+	for (int row = 0; row < MATRIX_ROWS; row++)
+	{
+		for (int col = 0; col < MATRIX_COLS; col++)
+		{
+
+			this->matrixArray[row][col] -= rhs.matrixArray[row][col];
+		}
+	}
+	return *this;
+}
+
 matrix matrix::operator*(const double x) const
 {
 	matrix mprs;
