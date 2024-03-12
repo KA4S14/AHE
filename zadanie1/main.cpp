@@ -2,7 +2,7 @@
 #include"Point.h"
 using namespace std;
 
-
+//jk
 int main()
 {
 	Point dzej('%', 4, 1, 10);
